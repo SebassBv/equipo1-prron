@@ -12,7 +12,7 @@ command = ["mosquitto_pub", "-t", topic, "-m", message]
 # Ejecuta el comando
 try:
     while True:
-        message = sensor.distance
+        message = str(sensor.distance)
         subprocess.run(command, check=True)
         print(message)
 except subprocess.CalledProcessError as e:

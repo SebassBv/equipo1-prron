@@ -4,10 +4,10 @@
 	</head>
 	
 	<body>
-	<h2>LED:{{ NumLed }}</h2>
-	<form method="post" action="/method_post_act">
-		<label id="Label1">NumLed</label>
-		<input name="Indica numero para encender leds" type="text"/>
+	<h2>LED:{{ ret }}</h2>
+	<form method="post" action="/led_post_act">
+		<label id="Label1">Indica numero para encender leds</label>
+		<input name="NumLed" type="text"/>
 		<input name="Submit1" type="submit" value="submit" />
 	</form>
 	</body>

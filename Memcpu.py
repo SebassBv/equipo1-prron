@@ -14,6 +14,13 @@ def getCaracteristicas():
     cpu = psutil.cpu_percent(interval=1)
     return ("Memoria: " + str(memory) + "   CPU: " + str(cpu)) 
 
+@app.route('/ArchivoDelServidor')
+def leerArchivo():
+    with open('letraDoja.txt', 'r') as file:
+    texto = file.read()
+    file.close()
+    return texto
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=80, host='0.0.0.0')
